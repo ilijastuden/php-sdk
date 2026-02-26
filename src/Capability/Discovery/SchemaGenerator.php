@@ -340,7 +340,7 @@ final class SchemaGenerator implements SchemaGeneratorInterface
             if (false !== $nullIndex) {
                 unset($jsonTypes[$nullIndex]);
                 sort($jsonTypes);
-                array_unshift($jsonTypes, 'null');
+                $jsonTypes[] = 'null'; // array_unshift($jsonTypes, 'null');
             } else {
                 sort($jsonTypes);
             }
